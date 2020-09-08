@@ -1,0 +1,2 @@
+# Jojo
+r script prediksi
