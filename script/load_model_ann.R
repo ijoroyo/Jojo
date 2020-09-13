@@ -1,5 +1,5 @@
 #- set working directory 
-setwd("D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak")
+#setwd("D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak")
 options(scipen = 999)
 
 # load necessary packages
@@ -109,7 +109,7 @@ data.aba[, 1:ncol(data.aba)] <- data.frame(lapply(data.aba[, 1:ncol(data.aba)], 
 head(data.aba)
 
 # load the model
-super_model <- readRDS("D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak\\bmkg\\final_model_ann_predict_jarak.rds")
+super_model <- readRDS("./dataset/final_model_ann_predict_jarak.rds")
 print(super_model)
 
 # Compute predictions
