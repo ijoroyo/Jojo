@@ -24,7 +24,7 @@ registerDoParallel(cores=8)
 ##### step 1: collecting data
 ##### step 2: exploring and preparing the data
 # read in data and examine structure
-data <- read.csv("dataset/Gempa_Tsunami_BMKG_Bathy_Jarak.csv")
+data <- read.csv("./dataset/Gempa_Tsunami_BMKG_Bathy_Jarak.csv")
 
 # Encode as a one hot vector multilabel data
 data <- cbind(data, class.ind(as.factor(data$TypeMag)))
@@ -201,5 +201,5 @@ confusionMatrix(factor(results$prediction),
                 factor(results$FlagTsu))
 
 # save the model to disk
-saveRDS(cross.nn, "output/final_model_ann_predict_jarak.rds")
+saveRDS(cross.nn, "./dataset/final_model_ann_predict_jarak.rds")
 
