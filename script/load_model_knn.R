@@ -1,5 +1,5 @@
 #- set working directory 
-setwd("D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak\\dataknn")
+#setwd("D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak\\dataknn")
 options(scipen = 999)
 
 #- Load required libraries
@@ -93,7 +93,7 @@ data %>%
 
 
 # load the model
-super_model <- readRDS("D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak\\bmkg\\final_model_knn_predict_jarak.rds")
+super_model <- readRDS("./dataset/final_model_knn_predict_jarak.rds")
 print(super_model)
 
 data$Predicted = predict(super_model, data[,6:32], "prob")[,2]
